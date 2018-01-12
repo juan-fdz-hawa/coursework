@@ -1,5 +1,7 @@
 (ns wk5.problems)
 
+; ----------------
+
 ;A binary mobile consists of two branches, a left branch and a right branch.
 ;Each branch is a rod of a certain length, from which hangs either a weight or
 ;another binary mobile.
@@ -46,6 +48,61 @@
 ;A mobile is said to be balanced if the torque applied by its top-left branch
 ;is equal to that applied by its top-right branch (that is, if the length of the
 ;left rod multiplied by the weight hanging from that rod is equal to the
-;corresponding product for the right side) and if each of the submobiles hanging
-;off its branches is balanced.
-(defn is-balanced? [mobile])
+;corresponding product for the right side).
+(defn is-balanced? [mobile]
+  (defn torque [branch]
+    (* (branch-length branch)
+       (if (is-mobile? (branch-structure branch))
+         (total-weight branch)
+         (branch-structure branch))))
+
+  (defn structure-is-balanced? [mobile]
+      (defn checker [structure]
+        (if (is-mobile? structure) structure-is-balanced? (fn [_] true)))
+
+      (and ((checker (branch-structure (left-branch mobile)))
+             (branch-structure (left-branch mobile)))
+           ((checker (branch-structure (right-branch mobile)))
+             (branch-structure (right-branch mobile)))))
+
+  (and (structure-is-balanced? (left-branch mobile))
+       (structure-is-balanced? (right-branch mobile))
+       (= (torque (left-branch mobile)) (torque (right-branch mobile)))))
+
+; -----------
+
+(defn make-tree [datum children]
+  (list datum children))
+
+(defn datum [node]
+  (first node))
+
+(defn children [node]
+  (second node))
+
+(defn tree-map [fn tree]
+  (make-tree (fn (datum tree)) (map tree-map (children tree))))
+
+; -----------
+;
+;(defn subsets [s]
+;  (if (empty? s)
+;    (list nil)
+;    (let [rest (subsets (rest s))]
+;      (conj rest (map list rest)))))
+
+;(print (subsets '(1 2 3)))
+
+(defn accumulate [op initial sequence]
+  (if (empty? sequence)
+    initial
+    (op (first sequence)
+        (accumulate op initial (rest sequence)))))
+
+; Given s = ((1 2 3) (4 5 6) (7 8 9) (10 11 12))
+; (accumulate-n + 0 s) -> (22 26 30)
+(defn accumulate-n [op init nested-seq]
+  (if (empty? (first nested-seq))
+    nil
+    (cons (accumulate op init (map first nested-seq))
+          (accumulate-n op init (map rest nested-seq)))))

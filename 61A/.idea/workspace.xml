@@ -18,8 +18,8 @@
       <file leaf-file-name="problems.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/wk5/problems.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,6 +138,12 @@
             </path>
             <path>
               <item name="61A" type="b2602c69:ProjectViewProjectNode" />
+              <item name="61A" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="wk5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="61A" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -164,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Clojure Application.wk4.problems-test">
+  <component name="RunManager" selected="Clojure Application.problems">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -196,15 +202,15 @@
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/wk4" />
     </configuration>
-    <configuration name="pj1" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+    <configuration name="problems" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="61A" />
-      <setting name="path" value="$PROJECT_DIR$/src/wk3/pj1.clj" />
+      <setting name="path" value="$PROJECT_DIR$/src/wk5/problems.clj" />
       <setting name="namespace" value="" />
       <setting name="useLein" value="false" />
       <setting name="profiles" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workDir" value="$PROJECT_DIR$/src/wk3" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/wk5" />
     </configuration>
     <configuration name="wk4.hw4-test" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="61A" />
@@ -294,19 +300,19 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Clojure Application.pj1" />
-      <item index="1" class="java.lang.String" itemvalue="Clojure Application.hw4" />
-      <item index="2" class="java.lang.String" itemvalue="Clojure Application.wk4.hw4-test" />
-      <item index="3" class="java.lang.String" itemvalue="Clojure Application.wk4.problems-test" />
-      <item index="4" class="java.lang.String" itemvalue="Clojure Application.wk4.problems" />
+      <item index="0" class="java.lang.String" itemvalue="Clojure Application.hw4" />
+      <item index="1" class="java.lang.String" itemvalue="Clojure Application.wk4.hw4-test" />
+      <item index="2" class="java.lang.String" itemvalue="Clojure Application.wk4.problems-test" />
+      <item index="3" class="java.lang.String" itemvalue="Clojure Application.wk4.problems" />
+      <item index="4" class="java.lang.String" itemvalue="Clojure Application.problems" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Clojure Application.wk4.problems-test" />
-        <item index="1" class="java.lang.String" itemvalue="Clojure Application.wk4.problems" />
-        <item index="2" class="java.lang.String" itemvalue="Clojure Application.wk4.hw4-test" />
-        <item index="3" class="java.lang.String" itemvalue="Clojure Application.hw4" />
-        <item index="4" class="java.lang.String" itemvalue="Clojure Application.pj1" />
+        <item index="0" class="java.lang.String" itemvalue="Clojure Application.problems" />
+        <item index="1" class="java.lang.String" itemvalue="Clojure Application.wk4.problems-test" />
+        <item index="2" class="java.lang.String" itemvalue="Clojure Application.wk4.problems" />
+        <item index="3" class="java.lang.String" itemvalue="Clojure Application.wk4.hw4-test" />
+        <item index="4" class="java.lang.String" itemvalue="Clojure Application.hw4" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +341,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.50555557" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5063291" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31304348" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31304348" sideWeight="0.49444443" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.49367088" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -546,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wk5/problems.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding />
         </state>
       </provider>
