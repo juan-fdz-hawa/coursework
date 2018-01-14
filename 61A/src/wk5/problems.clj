@@ -50,6 +50,7 @@
 ;left rod multiplied by the weight hanging from that rod is equal to the
 ;corresponding product for the right side).
 (defn is-balanced? [mobile]
+
   (defn torque [branch]
     (* (branch-length branch)
        (if (is-mobile? (branch-structure branch))
@@ -84,14 +85,7 @@
   (make-tree (fn (datum tree)) (map tree-map (children tree))))
 
 ; -----------
-;
-;(defn subsets [s]
-;  (if (empty? s)
-;    (list nil)
-;    (let [rest (subsets (rest s))]
-;      (conj rest (map list rest)))))
 
-;(print (subsets '(1 2 3)))
 
 (defn accumulate [op initial sequence]
   (if (empty? sequence)
@@ -106,3 +100,18 @@
     nil
     (cons (accumulate op init (map first nested-seq))
           (accumulate-n op init (map rest nested-seq)))))
+
+; ---------
+
+(defn dot-product [v w]
+  (accumulate + 0 (map * v w)))
+
+(defn matrix-*-vector [m v]
+  (map (fn [m-i] (dot-product m-i v)) m))
+
+(defn transpose [m]
+  (accumulate-n cons '() m))
+
+(defn matrix-*-matrix [m n]
+  (let [cols (transpose n)]
+    (map (fn [row-i] (matrix-*-vector cols row-i)) m)))
